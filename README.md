@@ -24,10 +24,14 @@ Effective inventory and sales management are essential for maximizing profitabil
 ## 🔍 Key Insights
 
 - **Top 10 vendors account for 65.69% of total purchases**, posing a concentration risk for supply chain dependency.
+- <img width="778" height="474" alt="Screenshot 2025-07-29 010322" src="https://github.com/user-attachments/assets/e7e68283-fb44-4819-8354-8e8193d90902" />
+
 - **Bulk purchasing resulted in a 72% lower unit cost**, demonstrating significant cost savings for higher quantity orders.
 - **$2.71 million worth of inventory had zero sales**, indicating potential excess or obsolete stock.
 - Products with **negative or zero gross profit** highlight losses driven by discounting or inefficiencies.
 - Low-performing vendors had **higher average margins (41.55%)** than top vendors (31.17%), but much lower sales volumes.
+- <img width="682" height="397" alt="Screenshot 2025-07-29 010216" src="https://github.com/user-attachments/assets/b0b54d73-5baf-4e49-8bd4-87e926e1fa43" />
+
 - Inventory turnover analysis suggests opportunities to improve cash flow and profitability by optimizing unsold stock.
 
 ## 📈 Methodology
@@ -44,9 +48,10 @@ Effective inventory and sales management are essential for maximizing profitabil
 - Optimize management of slow-moving inventory through clearance sales or adjusted reorder quantities.
 - Target enhanced marketing and sales strategies for vendors with low volumes but high profit margins.
 
-## 📂 Project Structure
+### 📁 Project Structure
 
-/notebooks # Jupyter Exploratory Data Analysis notebook
-/scripts # Python scripts for data ingestion and insights generation
-/reports # PDF summary report of findings and detailed analysis
-/images or /assets # Project visuals, charts, and screenshots
+- notebooks/ — Jupyter Exploratory Data Analysis notebooks
+- scripts/ — Python scripts for data ingestion and insights generation
+- reports/ — PDF summary report of findings and detailed analysis
+- images/ — Project visuals, charts, and screenshots
+
