@@ -1,112 +1,51 @@
-Business Problem 
-Effective inventory and sales management are critical for optimizing 
-profitability in the retail and wholesale industry. Companies need to ensure 
-that they are not incurring losses due to inefficient pricing, poor inventory 
-turnover, or vendor dependency. The goal of this analysis is to: 
-● Identify underperforming brands that require promotional or pricing 
-adjustments. 
-● Determine top vendors contributing to sales and gross profit. 
-● Analyze the impact of bulk purchasing on unit costs. 
-● Assess inventory turnover to reduce holding costs and improve 
-efficiency. 
-● Investigate the profitability variance between high-performing and 
-low-performing vendors. 
-Exploratory Data Analysis Insights  
-Summary Statistics 
-Negative & Zero Values: 
-Gross Profit: Minimum of -52,002.78, indicating potential losses due to 
-high costs or heavy discounts. This could be due to selling products at 
-lower prices than their purchase costs. 
-Profit Margin: Has a minimum of -∞, which suggests instances where 
-revenue is zero or even lower than the total cost, leading to extreme 
-negative profit margins. 
-Total Sales Quantity & Sales Dollars: Some products show zero sales, 
-indicating they were purchased but never sold. These may be slow-moving 
-or obsolete stock, leading to inventory inefficiencies. 
-Outliers Detected by High Standard Deviations:  
-Purchase & Actual Prices: The maximum values (5,681.81 & 7,499.99) 
-are significantly higher than the mean (24.39 & 35.64), indicating premium 
-product offerings. 
-Freight Cost: Extreme variation from 0.09 to 257,032.07 suggests logistics 
-inefficiencies, bulk shipments, or erratic shipping costs across different 
-products. 
-Stock Turnover: Ranges from 0 to 274.5, suggesting some products sell 
-rapidly while others remain unsold for long periods. A value greater than 1 
-indicates that sales for a product exceed the purchased quantity due to 
-older stock fulfilling orders. 
-Data Filtering 
-To enhance the reliability of the insights, we removed inconsistent data 
-points where: 
-● Gross Profit ≤ 0 (to exclude transactions leading to losses). 
-● Profit Margin ≤ 0 (to ensure analysis focuses on profitable 
-transactions). 
-● Total Sales Quantity = 0 (to eliminate inventory that was never sold). 
-Correlation Insights 
-Purchase Price vs. Total Sales Dollars & Gross Profit: Weak correlation 
-(-0.012 and -0.016), indicating that price variations do not significantly 
-impact sales revenue or profit. 
-Total Purchase Quantity vs. Total Sales Quantity: Strong correlation 
-(0.999), confirming efficient inventory turnover. 
-Profit Margin vs. Total Sales Price: Negative correlation (-0.179), 
-suggesting increasing sales prices may lead to reduced margins, possibly 
-due to competitive pricing pressures. 
-Stock Turnover vs. Gross Profit & Profit Margin: Weak negative 
-correlation (-0.038 & -0.055), indicating that faster stock turnover does not 
-necessarily equate to higher profitability. 
-Research Questions & Key Findings 
-1. Brands for Promotional or Pricing Adjustments 
-198 brands exhibit lower sales but higher profit margins, which could 
-benefit from targeted marketing, promotions, or price optimizations to 
-increase volume without compromising profitability. 
-2. Top Vendors by Sales & Purchase Contribution 
-The top 10 vendors contribute 65.69% of total purchases, while the 
-remaining vendors contribute only 34.31%. This over-reliance on a few 
-vendors may introduce risks such as supply chain disruptions, indicating a 
-need for diversification. 
-3. Impact of Bulk Purchasing on Cost Savings 
-Vendors buying in large quantities receive a 72% lower unit cost ($10.78 
-per unit vs. higher unit costs in smaller orders). 
-Bulk pricing strategies encourage larger orders, increasing total sales while 
-maintaining profitability. 
-4. Identifying Vendors with Low Inventory Turnover 
-Total Unsold Inventory Capital: $2.71M 
-Slow-moving inventory increases storage costs, reduces cash flow 
-efficiency, and affects overall profitability. 
-Identifying vendors with low inventory turnover enables better stock 
-management, minimizing financial strain. 
-5. Profit Margin Comparison: High vs. Low-Performing Vendors 
-Top Vendors' Profit Margin (95% CI): (30.74%, 31.61%), Mean: 31.17% 
-Low Vendors' Profit Margin (95% CI): (40.48%, 42.62%), Mean: 41.55% 
-Low-performing vendors maintain higher margins but struggle with sales 
-volumes, indicating potential pricing inefficiencies or market reach issues. 
-Actionable Insights: 
-● Top-performing vendors: Optimize profitability by adjusting 
-pricing, reducing operational costs, or offering bundled 
-promotions. 
-● Low-performing vendors: Improve marketing efforts, optimize 
-pricing strategies, and enhance distribution networks. 
-6. Statistical Validation of Profit Margin Differences 
-Hypothesis Testing: 
-H₀ (Null Hypothesis): No significant difference in profit margins between top 
-and low-performing vendors. 
-H₁ (Alternative Hypothesis): A significant difference exists in profit margins 
-between the two vendor groups. 
-Result: The null hypothesis is rejected, confirming that the two groups 
-operate under distinctly different profitability models. 
-Implication: High-margin vendors may benefit from better pricing 
-strategies, while top-selling vendors could focus on cost efficiency. 
-Final Recommendations 
-● Re-evaluate pricing for low-sales, high-margin brands to boost sales 
-volume without sacrificing profitability. 
-● Diversify vendor partnerships to reduce dependency on a few 
-suppliers and mitigate supply chain risks. 
-● Leverage bulk purchasing advantages to maintain competitive pricing 
-while optimizing inventory management. 
-● Optimize slow-moving inventory by adjusting purchase quantities, 
-launching clearance sales, or revising storage strategies. 
-● Enhance marketing and distribution strategies for low-performing 
-vendors to drive higher sales volumes without compromising profit 
-margins. 
-● By implementing these recommendations, the company can achieve 
-sustainable profitability, mitigate risks, and enhance overall 
-operational efficiency.
+# Vendor Performance Analysis
+
+## 📊 Project Overview
+
+This project analyzes vendor and brand performance in the retail/wholesale sector to support better decision-making in procurement, pricing, and inventory management. Using Python, Jupyter notebooks, and supporting data files, it identifies opportunities to improve profitability, reduce inventory risks, and optimize vendor relationships.
+
+## 🎯 Objectives
+
+- **Analyze** vendor and brand performance for data-driven procurement decisions.
+- **Identify** underperforming brands and vendors to guide sales and promotion strategies.
+- **Assess** inventory efficiency, bulk purchase impacts, and vendor concentration risks to reduce costs and risks.
+
+## 📝 Business Problem
+
+Effective inventory and sales management are essential for maximizing profitability and reducing risks related to pricing, vendor reliance, and stock inefficiency. The project specifically aims to:
+
+- Pinpoint low-performing brands for promotional or pricing adjustments.
+- Identify major vendors impacting sales and gross profit.
+- Measure effects of bulk purchases on unit cost.
+- Evaluate inventory turnover to cut holding costs.
+- Compare profitability differences between high- and low-performing vendors.
+
+## 🔍 Key Insights
+
+- **Top 10 vendors account for 65.69% of total purchases**, posing a concentration risk for supply chain dependency.
+- **Bulk purchasing resulted in a 72% lower unit cost**, demonstrating significant cost savings for higher quantity orders.
+- **$2.71 million worth of inventory had zero sales**, indicating potential excess or obsolete stock.
+- Products with **negative or zero gross profit** highlight losses driven by discounting or inefficiencies.
+- Low-performing vendors had **higher average margins (41.55%)** than top vendors (31.17%), but much lower sales volumes.
+- Inventory turnover analysis suggests opportunities to improve cash flow and profitability by optimizing unsold stock.
+
+## 📈 Methodology
+
+- Data was cleaned by filtering out loss-making and unsold items to focus on actionable insights.
+- Statistical techniques included correlation analysis, outlier detection, and hypothesis testing to validate findings robustly.
+- Visualization tools such as Python’s Matplotlib and Seaborn were used to illustrate trends and distributions (refer to included images or notebooks).
+
+## 🎯 Actionable Recommendations
+
+- Re-price and promote low-selling but high-margin brands to improve turnover.
+- Diversify the supplier base to reduce vendor concentration risk.
+- Leverage bulk purchasing discounts to lower unit costs where feasible.
+- Optimize management of slow-moving inventory through clearance sales or adjusted reorder quantities.
+- Target enhanced marketing and sales strategies for vendors with low volumes but high profit margins.
+
+## 📂 Project Structure
+
+/notebooks # Jupyter Exploratory Data Analysis notebook
+/scripts # Python scripts for data ingestion and insights generation
+/reports # PDF summary report of findings and detailed analysis
+/images or /assets # Project visuals, charts, and screenshots
