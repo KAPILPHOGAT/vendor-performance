@@ -1,4 +1,5 @@
 # Vendor Performance Analysis
+<img width="1157" height="684" alt="Screenshot 2025-07-29 004216" src="https://github.com/user-attachments/assets/d708131c-d987-4261-b6d5-b66f3f8e016e" />
 
 ## 📊 Project Overview
 
