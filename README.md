@@ -59,7 +59,7 @@ Effective inventory and sales management are essential for maximizing profitabil
 ## 🛡️ Notes
 
 - No confidential data included.
-- For detailed statistics, see `Vendor-Performance-Report.pdf`.
+- For detailed statistics, see [Vendor-Performance-Report.pd](https://github.com/KAPILPHOGAT/vendor-performance/blob/f89da73e8dbb9734cb13280e651673e122e80ff2/report/Vendor%20Performance%20Report.pdf).
 - Contact: [kapilphogat024@gmail.com]
 
 ---
